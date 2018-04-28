@@ -48,9 +48,25 @@ public class DetailActivity extends AppCompatActivity {
         }
 
         populateUI(sandwich);
+
+        // Added code snippet from https://stackoverflow.com/questions/24072176/picasso-image-load-callback
+        // in order to handle errors in image loading
         Picasso.with(this)
                 .load(sandwich.getImage())
-                .into(ingredientsIv);
+                .into(ingredientsIv, new com.squareup.picasso.Callback() {
+
+                    TextView errorMessageTextView = findViewById(R.id.image_error_tv);
+
+                    @Override
+                    public void onSuccess() {
+                        errorMessageTextView.setVisibility(View.INVISIBLE);
+                    }
+
+                    @Override
+                    public void onError() {
+                        errorMessageTextView.setVisibility(View.VISIBLE);
+                    }
+                });
 
         setTitle(sandwich.getMainName());
     }
