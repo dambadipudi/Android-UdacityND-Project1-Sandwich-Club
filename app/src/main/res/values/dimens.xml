@@ -2,4 +2,22 @@
 <resources>
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <!-- Dimensions used in activity_detail page -->
+
+    <!-- The height of the image displayed in the detail page -->
+    <dimen name="detail_image_height">300dp</dimen>
+
+    <!-- The margin used between the card and the parent as well
+    as the margin around the text within the card -->
+    <dimen name="detail_margin">16dp</dimen>
+
+    <!-- The margin used between the different topics -->
+    <dimen name="detail_margin_top">8dp</dimen>
+
+    <!-- The radius around the card corners -->
+    <dimen name="card_corner_radius">4dp</dimen>
+
+    <!-- The elevation and shadows displayed around the card -->
+    <dimen name="card_elevation">4dp</dimen>
 </resources>
