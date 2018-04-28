@@ -3,6 +3,7 @@ package com.udacity.sandwichclub;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -95,5 +96,63 @@ public class DetailActivity extends AppCompatActivity {
         // Populate the Description information
         TextView descriptionTextView = (TextView) findViewById(R.id.description_tv);
         descriptionTextView.setText(sandwich.getDescription());
+    }
+
+    /**
+     * This method is called when the Also Known As label is clicked
+     */
+    public void onAlsoKnownLabelClicked(View view) {
+        ImageView down_arrow = findViewById(R.id.also_known_as_down_arrow);
+        ImageView up_arrow = findViewById(R.id.also_known_as_up_arrow);
+        TextView informationTextView = findViewById(R.id.also_known_tv);
+        toggleFields(view, down_arrow, up_arrow, informationTextView);
+    }
+
+    /**
+     * This method is called when the Place of Origin label is clicked
+     */
+    public void onOriginClicked(View view) {
+        ImageView down_arrow = findViewById(R.id.place_of_origin_down_arrow);
+        ImageView up_arrow = findViewById(R.id.place_of_origin_up_arrow);
+        TextView informationTextView = findViewById(R.id.origin_tv);
+        toggleFields(view, down_arrow, up_arrow, informationTextView);
+    }
+
+    /**
+     * This method is called when the Ingredients label is clicked
+     */
+    public void onIngredientsClicked(View view) {
+        ImageView down_arrow = findViewById(R.id.ingredients_down_arrow);
+        ImageView up_arrow = findViewById(R.id.ingredients_up_arrow);
+        TextView informationTextView = findViewById(R.id.ingredients_tv);
+        toggleFields(view, down_arrow, up_arrow, informationTextView);
+    }
+
+    /**
+     * This method is called when the Description label is clicked
+     */
+    public void onDescriptionClicked(View view) {
+        ImageView down_arrow = findViewById(R.id.description_down_arrow);
+        ImageView up_arrow = findViewById(R.id.description_up_arrow);
+        TextView informationTextView = findViewById(R.id.description_tv);
+        toggleFields(view, down_arrow, up_arrow, informationTextView);
+    }
+
+    /**
+     * Method to expand and collapse the information field
+     */
+    public void toggleFields(View view, ImageView down_arrow, ImageView up_arrow, TextView informationTextView) {
+        if(view.getTag().equals("down")) {
+            down_arrow.setVisibility(View.VISIBLE);
+            up_arrow.setVisibility(View.INVISIBLE);
+            informationTextView.setVisibility(View.GONE);
+            view.setTag("up");
+        }
+        else {
+            down_arrow.setVisibility(View.INVISIBLE);
+            up_arrow.setVisibility(View.VISIBLE);
+            informationTextView.setVisibility(View.VISIBLE);
+            view.setTag("down");
+        }
     }
 }
