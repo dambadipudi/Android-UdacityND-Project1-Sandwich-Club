@@ -27,7 +27,7 @@ produces a Sandwich Object that can be used to populate the UI that you designed
 
 ## Submission and Evaluation
 Your project will be evaluated by a Udacity Code Reviewer according to [this rubric](https://review.udacity.com/#!/rubrics/1348/view) . Be sure to review it thoroughly before you submit. All criteria must "meet specifications" in order to pass.
-Note: Please make sure you clean your project before creating a zip file or pushing code to a GitHub repository. You can clean your project by following the instructions given in this link.
+Note: Please make sure you clean your project before creating a zip file or pushing code to a GitHub repository. You can clean your project by following the instructions given in this [link](https://d17h27t6h515a5.cloudfront.net/topher/2016/June/5769c116_1000-files-tutorial/1000-files-tutorial.pdf).
 
 If you are using GitHub to host your projects, please make sure the code you want to submit for review is in the master branch of your repository.
 
